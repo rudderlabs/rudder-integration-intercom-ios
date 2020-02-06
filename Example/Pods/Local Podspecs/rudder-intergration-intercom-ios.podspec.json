@@ -1,0 +1,22 @@
+{
+  "name": "rudder-intergration-intercom-ios",
+  "version": "0.1.0",
+  "summary": "A short description of rudder-intergration-intercom-ios.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/jamesmith2019rl/rudder-intergration-intercom-ios",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "jamesmith2019rl": "sampathvinayak1453@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/jamesmith2019rl/rudder-intergration-intercom-ios.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "rudder-intergration-intercom-ios/Classes/**/*"
+}
