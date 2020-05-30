@@ -2,10 +2,10 @@ use_frameworks!
 
 platform :ios, '8.0'
 
-target 'rudder-intergration-intercom-ios_Example' do
-  pod 'rudder-intergration-intercom-ios', :path => '../'
+target 'Rudder-Intercom_Example' do
+  pod 'Rudder-Intercom', :path => '../'
 
-  target 'rudder-intergration-intercom-ios_Tests' do
+  target 'Rudder-Intercom_Tests' do
     inherit! :search_paths
 
     pod 'FBSnapshotTestCase'

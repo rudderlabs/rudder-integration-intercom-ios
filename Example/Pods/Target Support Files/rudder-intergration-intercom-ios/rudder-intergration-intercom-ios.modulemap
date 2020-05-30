@@ -1,6 +1,0 @@
-framework module rudder_intergration_intercom_ios {
-  umbrella header "rudder-intergration-intercom-ios-umbrella.h"
-
-  export *
-  module * { export * }
-}

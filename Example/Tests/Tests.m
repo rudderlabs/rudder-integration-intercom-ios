@@ -1,9 +1,9 @@
 //
-//  rudder-intergration-intercom-iosTests.m
-//  rudder-intergration-intercom-iosTests
+//  Rudder-IntercomTests.m
+//  Rudder-IntercomTests
 //
-//  Created by jamesmith2019rl on 01/31/2020.
-//  Copyright (c) 2020 jamesmith2019rl. All rights reserved.
+//  Created by arnab on 05/30/2020.
+//  Copyright (c) 2020 arnab. All rights reserved.
 //
 
 @import XCTest;
