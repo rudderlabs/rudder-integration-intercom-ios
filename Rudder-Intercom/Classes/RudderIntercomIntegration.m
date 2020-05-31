@@ -16,10 +16,21 @@
 - (instancetype)initWithConfig:(NSDictionary *)config withAnalytics:(nonnull RSClient *)client  withRudderConfig:(nonnull RSConfig *)rudderConfig{
     self = [super init];
     if (self) {        
-        if([config objectForKey:@"mobileApiKey"] != nil && [config objectForKey:@"appId"] != nil){
-            NSString *mobileApiKey = [config objectForKey:@"mobileApiKey"];
+        if([config objectForKey:@"mobileApiKeyIOS"] != nil && [config objectForKey:@"appId"] != nil){
+            NSString *mobileApiKey = [config objectForKey:@"mobileApiKeyIOS"];
             NSString *appId = [config objectForKey:@"appId"];
             [Intercom setApiKey:mobileApiKey forAppId:appId];
+            
+            NSMutableDictionary *traits = [client getContext].traits;
+            NSString *userId = traits[@"userId"];
+            if (userId == nil) {
+                userId = traits[@"id"];
+            }
+            if (userId != nil) {
+                [Intercom registerUserWithUserId:userId];
+            } else {
+                [Intercom registerUnidentifiedUser];
+            }
         }
     }
     return self;
@@ -47,8 +58,6 @@
                                 company.name = companyTraits[field];
                             } else if ([[field lowercaseString] isEqualToString:@"id"]) {
                                 company.companyId = companyTraits[field];
-                            } else {
-                                company.customAttributes = companyTraits[field];
                             }
                         }
                         userAttributes.companies = @[company];
@@ -61,14 +70,17 @@
                     userAttributes.phone = traits[trait];
                 } else if ([[trait lowercaseString] isEqualToString:@"createdAt"]) {
                     userAttributes.name = traits[trait];
-                } else {
-                    userAttributes.customAttributes = traits[trait];
                 };
             }
         }
         [Intercom updateUser:userAttributes];
     } else if([message.type isEqualToString:@"track"]) {
-        [Intercom logEventWithName:message.event metaData: message.properties];
+        if (message.properties) {
+            [Intercom logEventWithName:message.event metaData: message.properties];
+        } else {
+            [Intercom logEventWithName:message.event];
+        }
+        
     }
 }
 
