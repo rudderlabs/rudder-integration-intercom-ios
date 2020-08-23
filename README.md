@@ -9,7 +9,7 @@ Rudder is a platform for collecting, storing and routing customer event data to 
 Released under [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0)
 
 ## Getting Started with Intercom Integration of Android SDK
-1. Add [Intercom](http://intercom.com) as a destination in the [Dashboard](https://app.rudderlabs.com/).
+1. Add [Intercom](http://intercom.com) as a destination in the [Dashboard](https://app.rudderstack.com/).
 
 2. Rudder-Intercom is available through [CocoaPods](https://cocoapods.org). To install it, add the following line to your Podfile and followed by `pod install`:
 
@@ -23,7 +23,6 @@ Put this code in your ```AppDelegate.m``` file under the method ```didFinishLaun
 RSConfigBuilder *builder = [[RSConfigBuilder alloc] init];
 [builder withDataPlaneUrl:DATA_PLANE_URL];
 [builder withFactory:[RudderIntercomFactory instance]];
-[builder withLoglevel:RSLogLevelDebug];
 [RSClient getInstance:WRITE_KEY config:[builder build]];
 ```
 
