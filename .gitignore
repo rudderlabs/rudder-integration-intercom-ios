@@ -1,8 +1,22 @@
+<<<<<<< HEAD
 # OS X
 .DS_Store
 
 # Xcode
 build/
+=======
+# Xcode
+#
+# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+
+## Build generated
+build/
+DerivedData/
+
+.swiftpm/
+
+## Various settings
+>>>>>>> d5e3310 (feat: upgraded Intercom version to 14.0.0)
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -12,6 +26,7 @@ build/
 *.perspectivev3
 !default.perspectivev3
 xcuserdata/
+<<<<<<< HEAD
 *.xccheckout
 profile
 *.moved-aside
@@ -22,11 +37,47 @@ DerivedData
 # Bundler
 .bundle
 
+=======
+
+## Other
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
+
+## Obj-C/Swift specific
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+## Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# Swift Package Manager
+#
+# Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
+# Packages/
+# Package.pins
+.build/
+
+# CocoaPods
+#
+# We recommend against adding the Pods directory to your .gitignore. However
+# you should judge for yourself, the pros and cons are mentioned at:
+# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
+#
+Pods/
+
+# Carthage
+#
+>>>>>>> d5e3310 (feat: upgraded Intercom version to 14.0.0)
 # Add this line if you want to avoid checking in source code from Carthage dependencies.
 # Carthage/Checkouts
 
 Carthage/Build
 
+<<<<<<< HEAD
 # We recommend against adding the Pods directory to your .gitignore. However
 # you should judge for yourself, the pros and cons are mentioned at:
 # https://guides.cocoapods.org/using/using-cocoapods.html#should-i-ignore-the-pods-directory-in-source-control
@@ -35,3 +86,18 @@ Carthage/Build
 # `pod install` in .travis.yml
 #
 # Pods/
+=======
+# fastlane
+#
+# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
+# screenshots whenever they are needed.
+# For more information about the recommended setup visit:
+# https://docs.fastlane.tools/best-practices/source-control/#source-control
+
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+IDEWorkspaceChecks.plist
+*.DS_Store
+>>>>>>> d5e3310 (feat: upgraded Intercom version to 14.0.0)
