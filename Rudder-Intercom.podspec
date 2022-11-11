@@ -1,6 +1,10 @@
+require 'json'
+
+package = JSON.parse(File.read(File.join(__dir__, 'package.json')))
+
 Pod::Spec.new do |s|
   s.name             = 'Rudder-Intercom'
-  s.version          = '1.0.0'
+  s.version          = package['version']
   s.summary          = 'Privacy and Security focused Segment-alternative. Intercom Native SDK integration support.'
 
   s.description      = <<-DESC
@@ -9,16 +13,17 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/rudderlabs/rudder-integration-intercom-ios'
   s.license          = { :type => "Apache", :file => "LICENSE" }
   s.author           = { 'RudderStack' => 'arnab@rudderlabs.com' }
-  s.source           = { :git => 'https://github.com/rudderlabs/rudder-integration-intercom-ios.git' , :tag => 'v1.0.0'}
-  s.platform         = :ios, "9.0"
+
+  s.source           = { :git => 'https://github.com/rudderlabs/rudder-integration-intercom-ios.git' , :tag => "v#{s.version}" }
+  s.platform         = :ios, "13.0"
   s.requires_arc = true
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '13.0'
 
   s.source_files = 'Rudder-Intercom/Classes/**/*'
 
   s.static_framework = true
 
-  s.dependency 'Rudder'
-  s.dependency 'Intercom'
+  s.dependency 'Rudder', '~> 1.0'
+  s.dependency 'Intercom', '14.0.0'
 end

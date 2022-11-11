@@ -1,0 +1,35 @@
+PODS:
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - Intercom (14.0.0)
+  - Rudder (1.7.1)
+  - Rudder-Intercom (1.0.0):
+    - Intercom (= 14.0.0)
+    - Rudder (~> 1.0)
+
+DEPENDENCIES:
+  - FBSnapshotTestCase
+  - Rudder-Intercom (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - FBSnapshotTestCase
+    - Intercom
+    - Rudder
+
+EXTERNAL SOURCES:
+  Rudder-Intercom:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  Intercom: 4faacb977c2fbdb876f5b3813671167662c1b572
+  Rudder: 61568212171ddc2efe7785d0a6a0de589d181370
+  Rudder-Intercom: d0bc75c77ca0181b5887f5b3e584ace165b9d8f2
+
+PODFILE CHECKSUM: 5514f0083248f4faa7b237702f1047d5723d748c
+
+COCOAPODS: 1.11.3
