@@ -11,7 +11,7 @@ More information on RudderStack can be found [here](https://github.com/rudderlab
 2. Rudder-Intercom is available through [CocoaPods](https://cocoapods.org). To install it, add the following line to your Podfile and followed by `pod install`:
 
 ```ruby
-pod 'Rudder-Intercom'
+pod 'Rudder-Intercom', '1.0.0'
 ```
 
 ## Initialize ```RSClient```
