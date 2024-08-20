@@ -4,11 +4,17 @@ PODS:
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - Intercom (14.0.0)
-  - Rudder (1.7.1)
-  - Rudder-Intercom (1.0.0):
-    - Intercom (= 14.0.0)
+  - Intercom (17.2.1)
+  - MetricsReporter (1.2.1):
+    - RSCrashReporter (= 1.0.1)
+    - RudderKit (= 1.4.0)
+  - RSCrashReporter (1.0.1)
+  - Rudder (1.28.0):
+    - MetricsReporter (= 1.2.1)
+  - Rudder-Intercom (1.1.0):
+    - Intercom (= 17.2.1)
     - Rudder (~> 1.0)
+  - RudderKit (1.4.0)
 
 DEPENDENCIES:
   - FBSnapshotTestCase
@@ -18,7 +24,10 @@ SPEC REPOS:
   trunk:
     - FBSnapshotTestCase
     - Intercom
+    - MetricsReporter
+    - RSCrashReporter
     - Rudder
+    - RudderKit
 
 EXTERNAL SOURCES:
   Rudder-Intercom:
@@ -26,10 +35,13 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  Intercom: 4faacb977c2fbdb876f5b3813671167662c1b572
-  Rudder: 61568212171ddc2efe7785d0a6a0de589d181370
-  Rudder-Intercom: d0bc75c77ca0181b5887f5b3e584ace165b9d8f2
+  Intercom: 3e9e26c8e2d0655e8f7527c395e570bb7733d5fa
+  MetricsReporter: 99596ee5003c69949ed2f50acc34aee83c42f843
+  RSCrashReporter: 6b8376ac729b0289ebe0908553e5f56d8171f313
+  Rudder: 9f1f6fdec5bd0e8845e2ac2d4f7b4584d069bf88
+  Rudder-Intercom: 3b3b80d51a581ce208e3a1685267883e47bd057b
+  RudderKit: f272f9872183946452ac94cd7bb2244a71e6ca8f
 
-PODFILE CHECKSUM: 5514f0083248f4faa7b237702f1047d5723d748c
+PODFILE CHECKSUM: 66a990b89c6814c531e79219d437f47e24447ac6
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.15.2
