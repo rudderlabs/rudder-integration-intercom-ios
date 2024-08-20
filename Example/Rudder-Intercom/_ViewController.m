@@ -20,6 +20,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
+    
     [[RSClient sharedInstance] track:@"simple_track_event_ios"];
     [[RSClient sharedInstance] track:@"simple_track_props_ios" properties:@{
         @"key1" : @"value1",
