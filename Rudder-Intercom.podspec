@@ -18,12 +18,12 @@ Pod::Spec.new do |s|
   s.platform         = :ios, "13.0"
   s.requires_arc = true
 
-  s.ios.deployment_target = '13.0'
+  s.ios.deployment_target = '15.0'
 
   s.source_files = 'Rudder-Intercom/Classes/**/*'
 
   s.static_framework = true
 
   s.dependency 'Rudder', '~> 1.0'
-  s.dependency 'Intercom', '14.0.0'
+  s.dependency 'Intercom', '17.2.1'
 end
