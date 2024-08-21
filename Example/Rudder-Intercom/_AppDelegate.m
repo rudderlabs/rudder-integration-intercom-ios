@@ -16,8 +16,8 @@
 {
     // Override point for customization after application launch.
     
-    NSString *DATA_PLANE_URL = @"https://hosted.rudderlabs.com";
-    NSString *WRITE_KEY = @"1celWezYSkGPQzL0foc9dnvFfsD";
+    NSString *DATA_PLANE_URL = @"<DATA_PLANE_URL>";
+    NSString *WRITE_KEY = @"WRITE_KEY";
     
     RSConfigBuilder *builder = [[RSConfigBuilder alloc] init];
     [builder withDataPlaneUrl:DATA_PLANE_URL];
